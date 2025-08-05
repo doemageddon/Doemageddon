@@ -1,114 +1,119 @@
-/* Global Styles */
+
 body {
+  font-family: Georgia, serif;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
+  padding: 0;
+  background-color: #fffaf0;
+  color: #4e3b2c;
 }
-
-a {
+header {
+  background-color: #cc3300;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav li {
+  margin: 0 1rem;
+}
+nav a {
+  color: white;
   text-decoration: none;
-  color: inherit;
+}
+main {
+  padding: 2rem;
+  text-align: center;
+}
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.product-card {
+  background: #fffaf0;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.product-card h3 {
+  color: #4e3b2c;
+}
+.product-card p {
+  font-weight: bold;
+  color: #993300;
+}
+.buy-btn {
+  display: inline-block;
+  background: #cc3300;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.buy-btn:hover {
+  background: #b72d00;
 }
 
-/* Navbar */
+
+/* Navbar container */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 30px;
-  background-image: url('../images/camo-bg.png');
+  padding: 10px 30px;
+
+  /* Camo background */
+  background-image: url('../images/camo-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
 }
 
-.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* overlay for contrast */
-  z-index: 0;
-}
-
-.navbar * {
-  position: relative;
-  z-index: 2;
-}
-
-.navbar img {
+/* Logo image */
+.logo {
   height: 60px;
-  margin-right: 15px;
-  cursor: pointer;
+  width: auto;
+  border-radius: 8px;
 }
 
-.navbar a.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #FF4500; /* Hunter's Orange */
-}
-
-.navbar ul {
+/* Navigation links */
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.navbar ul li a {
+.nav-links li a {
   color: #fff;
+  text-decoration: none;
   font-weight: bold;
-  padding: 6px 10px;
-  transition: background-color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-}
-
-/* Page Content */
-main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: #2E4D1D; /* Deep forest green */
-}
-
-/* Footer */
-footer {
-  background-color: #4B5320;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .navbar img {
-    height: 50px;
-  }
-
-  main {
-    padding: 20px 10px;
-  }
-}
+.nav-links li a:hover {
+  color: orange; /* hunter’s orange hover */
