@@ -79,3 +79,37 @@ footer {
 .buy-btn:hover {
   background: #b72d00;
 }
+
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: #2e2e2e; /* rustic dark background */
+}
+
+/* Logo image */
+.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: orange; /* hunter’s orange hover */
+}
