@@ -87,7 +87,12 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px;
-  background-color: #2e2e2e; /* rustic dark background */
+
+  /* Camo background */
+  background-image: url('../images/camo-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Logo image */
