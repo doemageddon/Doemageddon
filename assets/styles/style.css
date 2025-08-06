@@ -37,6 +37,7 @@ nav a {
 main {
   padding: 2rem;
   text-align: center;
+  background: none;
 }
 
 footer {
@@ -137,5 +138,6 @@ footer {
   color: #fffaf0;
   background: none;
 }
+
 
 
