@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register - Doemageddon</title>
-  <link rel="stylesheet" href="/assets/styles/style.css" />
-  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
 
@@ -15,106 +14,55 @@
     <nav>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/rules.html">Rules</a></li>
-        <li><a href="/register.html" class="active">Register</a></li>
-        <li><a href="/sponsors.html">Sponsors</a></li>
-        <li><a href="/store.html">Store</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/rules">Rules</a></li>
+        <li><a href="/register" class="active">Register</a></li>
+        <li><a href="/sponsors">Sponsors</a></li>
+        <li><a href="/store">Store</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Header -->
   <section class="hero">
-    <h1>Register for Doemageddon</h1>
-    <p>Join us in the hunt and help feed families in need. Each registration covers one hunter. You may optionally add a meal ticket for a plus one.</p>
+    <h1>Hunter Registration</h1>
+    <p>Secure your spot in Doemageddon! Limited to 100 hunters and 100 meal tickets.</p>
   </section>
 
   <!-- Registration Form -->
   <section class="section">
-    <form id="registration-form">
-      <div>
-        <label for="name">Full Name:</label><br />
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div>
-        <label for="email">Email Address:</label><br />
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div>
-        <label for="phone">Phone Number:</label><br />
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div>
-        <label>
-          <input type="checkbox" id="meal-ticket" name="mealTicket" />
-          Add Meal Ticket for Plus One ($20)
-        </label>
-      </div>
+    <h2>Register Below</h2>
+    <p>Please complete the form. After submission, continue to the secure payment page.</p>
 
-      <div id="payment-element">
-        <!-- Stripe Payment Element will load here -->
-      </div>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
-      <button type="submit" id="submit">Pay & Register</button>
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label>
+        <input type="checkbox" name="meal_ticket" value="yes">
+        Add $20 Meal Ticket for a Guest
+      </label><br><br>
+
+      <button type="submit" class="buy-btn">Submit Registration Info</button>
     </form>
-    <div id="payment-message"></div>
+
+    <br>
+
+    <a href="https://buy.stripe.com/your-stripe-link" target="_blank" class="buy-btn">
+      Proceed to Payment
+    </a>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Doemageddon. All rights reserved.
+    <p>&copy; 2025 Doemageddon. All rights reserved.</p>
   </footer>
 
-  <script type="module">
-    import {loadStripe} from 'https://js.stripe.com/v3/';
-
-    const stripe = await loadStripe("pk_test_YOUR_PUBLIC_KEY"); // Replace with your Stripe public key
-
-    const response = await fetch("/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ mealTicket: false }) // default, updated later
-    });
-
-    const { clientSecret } = await response.json();
-
-    const elements = stripe.elements({ clientSecret });
-
-    const paymentElement = elements.create("payment");
-    paymentElement.mount("#payment-element");
-
-    const form = document.getElementById("registration-form");
-    const mealTicketCheckbox = document.getElementById("meal-ticket");
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const { error } = await stripe.confirmPayment({
-        elements,
-        confirmParams: {
-          return_url: window.location.href, // optional
-          payment_method_data: {
-            billing_details: {
-              name: form.name.value,
-              email: form.email.value,
-              phone: form.phone.value
-            }
-          }
-        }
-      });
-
-      if (error) {
-        document.getElementById("payment-message").textContent = error.message;
-      } else {
-        document.getElementById("payment-message").textContent = "Processing payment...";
-      }
-    });
-
-    mealTicketCheckbox.addEventListener("change", async () => {
-      // Refresh the page or create a new PaymentIntent
-      location.reload(); // Simplest option for now
-    });
-  </script>
 </body>
 </html>
