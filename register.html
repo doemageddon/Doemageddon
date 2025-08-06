@@ -2,32 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doemageddon - Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Doemageddon</title>
   <link rel="stylesheet" href="assets/styles/style.css" />
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="store.html">Store</a></li>
-    </ul>
-  </nav>
-</header>
-  <main>
-    <h2>Register</h2>
-    <p>Register and pay to join Doemageddon.</p>
-  </main>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero">
+    <h1>Register for Doemageddon</h1>
+    <p>Secure your spot for this year's hunt. Join a great cause and help feed those in need.</p>
+  </section>
+
+  <!-- Registration Section -->
+  <section class="section">
+    <form action="submit-registration" method="post" class="registration-form">
+      <div>
+        <label for="fullName">Full Name:</label><br/>
+        <input type="text" id="fullName" name="fullName" required />
+      </div>
+
+      <div>
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div>
+        <label for="phone">Phone Number:</label><br/>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+
+      <div>
+        <label for="address">Mailing Address:</label><br/>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+
+      <div>
+        <label for="dnr">Michigan DNR ID:</label><br/>
+        <input type="text" id="dnr" name="dnr" required />
+      </div>
+
+      <div>
+        <button type="submit">Submit Registration</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Doemageddon. All rights reserved.</p>
+    &copy; 2025 Doemageddon. All rights reserved.
   </footer>
+
 </body>
 </html>
