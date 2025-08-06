@@ -3,8 +3,11 @@ body {
   font-family: Georgia, serif;
   margin: 0;
   padding: 0;
-  background-color: #fffaf0;
-  color: #4e3b2c;
+  background-image: url('assets/images/camo-bg2.jpg');
+  background-size: 300px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #fffaf0;
 }
 
 header {
@@ -129,12 +132,10 @@ footer {
 
 /* Wrapper for camo background content */
 .content-wrapper {
-  background-color: #2f2f2f;
-  background-image: url('assets/images/camo-bg2.jpg');
-  background-size: 300px;
-  background-repeat: repeat;
-  background-position: center;
   padding: 2rem;
   min-height: 100vh;
   color: #fffaf0;
+  background: none;
 }
+
+
