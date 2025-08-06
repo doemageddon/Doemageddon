@@ -1,4 +1,4 @@
-
+/* Base Styles */
 body {
   font-family: Georgia, serif;
   margin: 0;
@@ -7,6 +7,7 @@ body {
   color: #4e3b2c;
 }
 
+/* Header */
 header {
   background-color: #cc3300;
   color: white;
@@ -14,28 +15,59 @@ header {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+/* Navbar Container */
+.navbar {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-image: url('../images/camo-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-nav li {
-  margin: 0 1rem;
+/* Logo Image */
+.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 8px;
 }
 
-nav a {
-  color: white;
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
-main {
+.nav-links li a:hover {
+  color: orange; /* hunter’s orange hover */
+}
+
+/* Content Wrapper (below header/navbar) */
+.content-wrapper {
+  background-image: url('../images/camo-bg2.jpg');
+  background-size: 300px;
+  background-position: center;
+  background-repeat: repeat;
   padding: 2rem;
+  min-height: 100vh;
+  color: #fffaf0;
+}
+
+/* Main Content */
+main {
   text-align: center;
 }
 
+/* Footer */
 footer {
   background-color: #eee;
   text-align: center;
@@ -45,6 +77,7 @@ footer {
   width: 100%;
 }
 
+/* Store Grid */
 .store-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -52,6 +85,7 @@ footer {
   margin-top: 2rem;
 }
 
+/* Product Card */
 .product-card {
   background: #fffaf0;
   border-radius: 12px;
@@ -79,6 +113,7 @@ footer {
   color: #993300;
 }
 
+/* Buy Button */
 .buy-btn {
   display: inline-block;
   background: #cc3300;
@@ -92,50 +127,3 @@ footer {
 
 .buy-btn:hover {
   background: #b72d00;
-}
-
-/* Navbar container */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
-  background-image: url('../images/camo-bg2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Logo image */
-.logo {
-  height: 60px;
-  width: auto;
-  border-radius: 8px;
-}
-
-/* Navigation links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-links li a:hover {
-  color: orange; /* hunter’s orange hover */
-}
-
-/* Wrapper for page content under navbar */
-.content-wrapper {
-  background-image: url('../images/camo-bg2.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 2rem;
-  min-height: 100vh;
-  color: #fffaf0;
-}
