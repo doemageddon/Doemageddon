@@ -1,142 +1,57 @@
 /* Base Styles */
-body {
-  font-family: Georgia, serif;
+/* Reset layout */
+* {
   margin: 0;
   padding: 0;
-  background-image: url('assets/images/camo-bg2.jpg');
-  background-size: 300px;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  color: #fffaf0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #cc3300;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav li {
-  margin: 0 1rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
-  padding: 2rem;
-  text-align: center;
-  background: none;
-}
-
-footer {
-  background-color: #eee;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
+html, body {
+  height: 100%;
   width: 100%;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url('assets/images/background-camo.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-.store-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.product-card {
-  background: #fffaf0;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.02);
-}
-
-.product-card img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.product-card h3 {
-  color: #4e3b2c;
-}
-
-.product-card p {
-  font-weight: bold;
-  color: #993300;
-}
-
-.buy-btn {
-  display: inline-block;
-  background: #cc3300;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
-.buy-btn:hover {
-  background: #b72d00;
-}
-
-/* Navbar container */
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(166, 61, 23, 0.95); /* transparent hunter orange */
   padding: 10px 30px;
-  background-color: #cc3300;
 }
 
-/* Logo image */
 .logo {
-  height: 60px;
-  width: auto;
-  border-radius: 8px;
+  height: 50px;
 }
 
-/* Navigation links */
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 20px;
+  list-style: none;
 }
 
-.nav-links li a {
-  color: #fff;
+.nav-links a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav-links li a:hover {
-  color: orange;
+/* Content section */
+.content {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
 }
 
-/* Wrapper for camo background content */
-.content-wrapper {
-  padding: 2rem;
-  min-height: 100vh;
-  color: #fffaf0;
-  background: none;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent footer */
 }
 
 
