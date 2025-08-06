@@ -3,7 +3,10 @@ body {
   font-family: Georgia, serif;
   margin: 0;
   padding: 0;
-  background-color: #fffaf0;
+  background-image: url('../images/camo-bg1.jpg');
+  background-size: 300px; /* or 'cover' if you want it scaled */
+  background-repeat: repeat;
+  background-attachment: fixed;
   color: #4e3b2c;
 }
 header {
