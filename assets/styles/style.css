@@ -88,11 +88,11 @@ footer {
   justify-content: space-between;
   padding: 10px 30px;
 
-  /* Camo background */
-  background-image: url('../images/camo-bg.jpg1');
+  /* Updated camo background */
+  background-image: url('../images/camo-bg1.jpg');
   background-size: cover;
+  background-repeat: repeat;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Logo image */
