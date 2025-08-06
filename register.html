@@ -10,15 +10,15 @@
 
   <!-- Navigation -->
   <header class="navbar">
-    <img src="/assets/images/logo.png" alt="Doemageddon Logo" class="logo" />
+    <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
     <nav>
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/rules">Rules</a></li>
-        <li><a href="/register" class="active">Register</a></li>
-        <li><a href="/sponsors">Sponsors</a></li>
-        <li><a href="/store">Store</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="register.html" class="active">Register</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="store.html">Store</a></li>
       </ul>
     </nav>
   </header>
@@ -32,7 +32,7 @@
   <!-- Registration Form -->
   <section class="section">
     <h2>Hunter Registration</h2>
-    <form id="registration-form">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <div class="form-group">
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" required />
@@ -55,18 +55,20 @@
         </label>
       </div>
 
-      <!-- Stripe Payment Element -->
-      <div id="payment-element"><!-- Stripe mounts here --></div>
-
-      <button type="submit" id="submit">Pay & Register</button>
+      <button type="submit" class="buy-btn">Submit Registration Info</button>
     </form>
+
+    <br>
+
+    <a href="https://buy.stripe.com/7sY5kC0Ya6eB5uxcx8cs800" target="_blank" class="buy-btn">
+      Proceed to Payment
+    </a>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Doemageddon. All rights reserved.
+    <p>&copy; 2025 Doemageddon. All rights reserved.</p>
   </footer>
 
-  <!-- Stripe Scripts (added later in backend integration) -->
 </body>
 </html>
