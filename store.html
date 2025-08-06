@@ -1,199 +1,157 @@
-<link rel="stylesheet" href="assets/styles/style.css">
-<!-- Navbar Start -->
-<header>
-  <nav class="navbar">
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="store.html">Store</a></li>
-    </ul>
-  </nav>
-</header>
-<!-- Navbar End -->
-<div id='product-component-1754412549964'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: '03regv-v4.myshopify.com',
-      storefrontAccessToken: '4215a9d91eb97cf87dee01fc98ed8ca3',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '9757694656759',
-        node: document.getElementById('product-component-1754412549964'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
-      }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
-      }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {}
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store - Doemageddon</title>
+  <link rel="stylesheet" href="assets/styles/style.css" />
+</head>
+<body>
 
-<div id='product-component-1754418509617'></div>
-<script type="text/javascript">
-/*<![CDATA[*/
-(function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) {
-      ShopifyBuyInit();
-    } else {
-      loadScript();
-    }
-  } else {
-    loadScript();
-  }
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-    script.onload = ShopifyBuyInit;
-  }
-  function ShopifyBuyInit() {
-    var client = ShopifyBuy.buildClient({
-      domain: '03regv-v4.myshopify.com',
-      storefrontAccessToken: '4215a9d91eb97cf87dee01fc98ed8ca3',
-    });
-    ShopifyBuy.UI.onReady(client).then(function (ui) {
-      ui.createComponent('product', {
-        id: '9757693870327',
-        node: document.getElementById('product-component-1754418509617'),
-        moneyFormat: '%24%7B%7Bamount%7D%7D',
-        options: {
-  "product": {
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
-          "margin-bottom": "50px"
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="store.html" class="active">Store</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Official Doemageddon Gear</h1>
+    <p>Support the cause and show your pride with shirts, hats, and more.</p>
+  </section>
+
+  <!-- Store Section -->
+  <section class="section" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+
+    <!-- Product 1 -->
+    <div id="product-component-1754412549964"></div>
+
+    <!-- Product 2 -->
+    <div id="product-component-1754418509617"></div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Doemageddon. All rights reserved.
+  </footer>
+
+  <!-- Shopify Buy Button Scripts -->
+  <script type="text/javascript">
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
         }
+      } else {
+        loadScript();
       }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "productSet": {
-    "styles": {
-      "products": {
-        "@media (min-width: 601px)": {
-          "margin-left": "-20px"
-        }
+
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        document.head.appendChild(script);
+        script.onload = ShopifyBuyInit;
       }
-    }
-  },
-  "modalProduct": {
-    "contents": {
-      "img": false,
-      "imgWithCarousel": true,
-      "button": false,
-      "buttonWithQuantity": true
-    },
-    "styles": {
-      "product": {
-        "@media (min-width: 601px)": {
-          "max-width": "100%",
-          "margin-left": "0px",
-          "margin-bottom": "0px"
-        }
+
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: '03regv-v4.myshopify.com',
+          storefrontAccessToken: '4215a9d91eb97cf87dee01fc98ed8ca3',
+        });
+
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          // Product 1
+          ui.createComponent('product', {
+            id: '9757694656759',
+            node: document.getElementById('product-component-1754412549964'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              product: {
+                styles: {
+                  product: {
+                    '@media (min-width: 601px)': {
+                      'max-width': '300px',
+                      'margin': 'auto'
+                    }
+                  }
+                },
+                text: {
+                  button: 'Add to cart'
+                }
+              },
+              cart: {
+                text: {
+                  total: 'Subtotal',
+                  button: 'Checkout'
+                }
+              },
+              modalProduct: {
+                contents: {
+                  img: false,
+                  imgWithCarousel: true,
+                  button: false,
+                  buttonWithQuantity: true
+                }
+              }
+            }
+          });
+
+          // Product 2
+          ui.createComponent('product', {
+            id: '9757693870327',
+            node: document.getElementById('product-component-1754418509617'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+              product: {
+                styles: {
+                  product: {
+                    '@media (min-width: 601px)': {
+                      'max-width': '300px',
+                      'margin': 'auto'
+                    }
+                  }
+                },
+                text: {
+                  button: 'Add to cart'
+                }
+              },
+              cart: {
+                text: {
+                  total: 'Subtotal',
+                  button: 'Checkout'
+                }
+              },
+              modalProduct: {
+                contents: {
+                  img: false,
+                  imgWithCarousel: true,
+                  button: false,
+                  buttonWithQuantity: true
+                }
+              }
+            }
+          });
+        });
       }
-    },
-    "text": {
-      "button": "Add to cart"
-    }
-  },
-  "option": {},
-  "cart": {
-    "text": {
-      "total": "Subtotal",
-      "button": "Checkout"
-    }
-  },
-  "toggle": {}
-},
-      });
-    });
-  }
-})();
-/*]]>*/
-</script>
+    })();
+  </script>
+
+</body>
+</html>
+
