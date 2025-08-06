@@ -3,18 +3,17 @@ body {
   font-family: Georgia, serif;
   margin: 0;
   padding: 0;
-  background-image: url('../images/camo-bg2.jpg');
-  background-size: 300px; /* or 'cover' if you want it scaled */
-  background-repeat: repeat;
-  background-attachment: fixed;
+  background-color: #fffaf0;
   color: #4e3b2c;
 }
+
 header {
   background-color: #cc3300;
   color: white;
   padding: 1rem;
   text-align: center;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -22,17 +21,21 @@ nav ul {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 nav li {
   margin: 0 1rem;
 }
+
 nav a {
   color: white;
   text-decoration: none;
 }
+
 main {
   padding: 2rem;
   text-align: center;
 }
+
 footer {
   background-color: #eee;
   text-align: center;
@@ -41,12 +44,14 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 .store-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .product-card {
   background: #fffaf0;
   border-radius: 12px;
@@ -55,20 +60,25 @@ footer {
   text-align: center;
   transition: transform 0.2s ease;
 }
+
 .product-card:hover {
   transform: scale(1.02);
 }
+
 .product-card img {
   max-width: 100%;
   border-radius: 10px;
 }
+
 .product-card h3 {
   color: #4e3b2c;
 }
+
 .product-card p {
   font-weight: bold;
   color: #993300;
 }
+
 .buy-btn {
   display: inline-block;
   background: #cc3300;
@@ -79,10 +89,10 @@ footer {
   font-weight: bold;
   margin-top: 0.5rem;
 }
+
 .buy-btn:hover {
   background: #b72d00;
 }
-
 
 /* Navbar container */
 .navbar {
@@ -90,12 +100,10 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px;
-
-  /* Updated camo background */
   background-image: url('../images/camo-bg2.jpg');
   background-size: cover;
-  background-repeat: repeat;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Logo image */
@@ -120,3 +128,14 @@ footer {
 
 .nav-links li a:hover {
   color: orange; /* hunter’s orange hover */
+}
+
+/* Wrapper for page content under navbar */
+.content-wrapper {
+  background-image: url('../images/camo-bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  min-height: 100vh;
+  color: #fffaf0;
+}
