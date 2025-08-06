@@ -4,57 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register - Doemageddon</title>
-  <link rel="stylesheet" href="assets/styles/style.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/register.js"></script>
 </head>
 <body>
 
   <!-- Navigation -->
   <header class="navbar">
-    <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
+    <img src="/assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="rules.html">Rules</a></li>
-        <li><a href="register.html" class="active">Register</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="store.html">Store</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/rules">Rules</a></li>
+        <li><a href="/register" class="active">Register</a></li>
+        <li><a href="/sponsors">Sponsors</a></li>
+        <li><a href="/store">Store</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Header -->
+  <!-- Hero -->
   <section class="hero">
     <h1>Register for Doemageddon</h1>
-    <p>Secure your spot for this year's hunt. Join a great cause and help feed those in need.</p>
+    <p>Join the hunt and help feed Michigan families.</p>
   </section>
 
-  <!-- Registration Section -->
+  <!-- Registration Form -->
   <section class="section">
-    <form action="submit-registration" method="post" class="registration-form">
-      <div>
-        <label for="fullName">Full Name:</label><br/>
+    <form id="registration-form">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
         <input type="text" id="fullName" name="fullName" required />
       </div>
 
-      <div>
-        <label for="email">Email:</label><br/>
+      <div class="form-group">
+        <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required />
       </div>
 
-      <div>
-        <label for="phone">Phone Number:</label><br/>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone" required />
       </div>
 
-      <div>
-        <label for="address">Mailing Address:</label><br/>
-        <textarea id="address" name="address" rows="3" required></textarea>
+      <div class="form-group">
+        <label for="hunterCount">Number of Hunters ($100 each, max 100)</label>
+        <input type="number" id="hunterCount" name="hunterCount" min="1" max="100" value="1" required />
       </div>
 
-      <div>
-        <button type="submit">Submit Registration</button>
+      <div class="form-group">
+        <label for="mealTickets">Meal Tickets ($20 each, optional, max 100)</label>
+        <input type="number" id="mealTickets" name="mealTickets" min="0" max="100" value="0" />
       </div>
+
+      <div class="form-group total-display">
+        <strong>Total: $<span id="totalAmount">100</span></strong>
+      </div>
+
+      <!-- Stripe Payment Element Placeholder -->
+      <div id="payment-element">
+        <!-- Stripe Payment Element will go here -->
+      </div>
+
+      <button type="submit">Submit & Pay</button>
     </form>
   </section>
 
