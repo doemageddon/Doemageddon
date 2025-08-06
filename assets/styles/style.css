@@ -130,7 +130,7 @@ footer {
 /* Wrapper for camo background content */
 .content-wrapper {
   background-color: #2f2f2f;
-  background-image: url('../images/camo-bg2.jpg');
+  background-image: url('assets/images/camo-bg2.jpg');
   background-size: 300px;
   background-repeat: repeat;
   background-position: center;
