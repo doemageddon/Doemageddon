@@ -3,7 +3,7 @@ body {
   font-family: Georgia, serif;
   margin: 0;
   padding: 0;
-  background-image: url('../images/camo-bg1.jpg');
+  background-image: url('../images/camo-bg2.jpg');
   background-size: 300px; /* or 'cover' if you want it scaled */
   background-repeat: repeat;
   background-attachment: fixed;
