@@ -1,58 +1,81 @@
-/* Base Styles */
-/* Reset layout */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: url('assets/images/background-camo.jpg') no-repeat center center fixed;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('assets/images/camo-bg2.png') no-repeat center center fixed;
   background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Navbar */
+/* Header styles */
 .navbar {
+  background-color: rgba(153, 51, 0, 0.95); /* Hunter orange with transparency */
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(166, 61, 23, 0.95); /* transparent hunter orange */
-  padding: 10px 30px;
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
 }
 
+/* Navigation links */
 .nav-links {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-.nav-links a {
-  color: white;
+.nav-links li a {
   text-decoration: none;
+  color: #fff;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-/* Content section */
-.content {
+.nav-links li a:hover {
+  color: #ffcc99;
+}
+
+/* Main content wrapper */
+.content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 100px;
-  padding: 20px;
+  padding: 4rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
+}
+
+/* Main content styles */
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+main p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.5); /* semi-transparent footer */
+  padding: 1rem;
+  background-color: rgba(153, 51, 0, 0.95);
+  color: #fff;
+  font-size: 0.9rem;
 }
-
 
 
