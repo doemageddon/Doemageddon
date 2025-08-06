@@ -55,8 +55,8 @@ header {
 .content-wrapper {
   background-image: url('../images/camo-bg2.jpg');
   background-size: 300px;
-  background-position: center;
   background-repeat: repeat;
+  background-position: center;
   padding: 2rem;
   min-height: 100vh;
   color: #fffaf0;
