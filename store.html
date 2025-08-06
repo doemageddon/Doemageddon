@@ -10,9 +10,7 @@
 
   <!-- Navigation -->
   <header class="navbar">
-    <a href="index.html" class="logo-link">
-      <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
-    </a>
+    <img src="assets/images/logo.png" alt="Doemageddon Logo" class="logo" />
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -27,19 +25,14 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Official Doemageddon Gear</h1>
-    <p>Support the cause and show your pride with shirts, hats, and more.</p>
+    <h1>Official Doemageddon Store</h1>
+    <p>Support the cause and show your pride with official merchandise.</p>
   </section>
 
-  <!-- Store Section -->
-  <section class="section" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-
-    <!-- Product 1 -->
-    <div id="product-component-1754412549964"></div>
-
-    <!-- Product 2 -->
-    <div id="product-component-1754418509617"></div>
-
+  <!-- Product Section -->
+  <section class="section">
+    <div id="product-component-1"></div>
+    <div id="product-component-2"></div>
   </section>
 
   <!-- Footer -->
@@ -65,7 +58,7 @@
         var script = document.createElement('script');
         script.async = true;
         script.src = scriptURL;
-        document.head.appendChild(script);
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
         script.onload = ShopifyBuyInit;
       }
 
@@ -76,10 +69,9 @@
         });
 
         ShopifyBuy.UI.onReady(client).then(function (ui) {
-          // Product 1
           ui.createComponent('product', {
             id: '9757694656759',
-            node: document.getElementById('product-component-1754412549964'),
+            node: document.getElementById('product-component-1'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               product: {
@@ -88,7 +80,24 @@
                     '@media (min-width: 601px)': {
                       'max-width': '300px',
                       'margin': 'auto'
-                    }
+                    },
+                    'color': '#ffffff'
+                  },
+                  title: {
+                    color: '#ffffff'
+                  },
+                  description: {
+                    color: '#ffffff'
+                  },
+                  price: {
+                    color: '#ffffff'
+                  },
+                  compareAt: {
+                    color: '#dddddd'
+                  },
+                  button: {
+                    'background-color': '#7A3E1D',
+                    'color': '#ffffff'
                   }
                 },
                 text: {
@@ -99,23 +108,14 @@
                 text: {
                   total: 'Subtotal',
                   button: 'Checkout'
-                }
-              },
-              modalProduct: {
-                contents: {
-                  img: false,
-                  imgWithCarousel: true,
-                  button: false,
-                  buttonWithQuantity: true
                 }
               }
             }
           });
 
-          // Product 2
           ui.createComponent('product', {
             id: '9757693870327',
-            node: document.getElementById('product-component-1754418509617'),
+            node: document.getElementById('product-component-2'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               product: {
@@ -124,7 +124,24 @@
                     '@media (min-width: 601px)': {
                       'max-width': '300px',
                       'margin': 'auto'
-                    }
+                    },
+                    'color': '#ffffff'
+                  },
+                  title: {
+                    color: '#ffffff'
+                  },
+                  description: {
+                    color: '#ffffff'
+                  },
+                  price: {
+                    color: '#ffffff'
+                  },
+                  compareAt: {
+                    color: '#dddddd'
+                  },
+                  button: {
+                    'background-color': '#7A3E1D',
+                    'color': '#ffffff'
                   }
                 },
                 text: {
@@ -135,14 +152,6 @@
                 text: {
                   total: 'Subtotal',
                   button: 'Checkout'
-                }
-              },
-              modalProduct: {
-                contents: {
-                  img: false,
-                  imgWithCarousel: true,
-                  button: false,
-                  buttonWithQuantity: true
                 }
               }
             }
@@ -154,4 +163,5 @@
 
 </body>
 </html>
+
 
