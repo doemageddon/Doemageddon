@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,76 +6,63 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('assets/images/camo-bg2.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header styles */
-.navbar {
-  background-color: rgba(153, 51, 0, 0.95); /* Hunter orange with transparency */
-  padding: 1rem 2rem;
+/* Background Section */
+.hero {
+  background-image: url('images/camo-bg2.png');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Helps with contrast */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #84401a;
+  padding: 1rem 2rem;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  height: 60px;
+  height: 50px;
 }
 
-/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-.nav-links li a {
+.nav-links a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #ffcc99;
-}
-
-/* Main content wrapper */
-.content-wrapper {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent dark overlay */
-}
-
-/* Main content styles */
-main h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-main p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
 }
 
 /* Footer */
 footer {
+  background-color: #84401a;
+  color: #fff;
   text-align: center;
   padding: 1rem;
-  background-color: rgba(153, 51, 0, 0.95);
-  color: #fff;
-  font-size: 0.9rem;
 }
 
 
