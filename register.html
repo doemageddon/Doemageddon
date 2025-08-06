@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register - Doemageddon</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <script defer src="/assets/js/register.js"></script>
 </head>
 <body>
 
   <!-- Navigation -->
   <header class="navbar">
-    <img src="/assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
+    <img src="/assets/images/logo.png" alt="Doemageddon Logo" class="logo" />
     <nav>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
@@ -24,50 +23,42 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Register for Doemageddon</h1>
-    <p>Join the hunt and help feed Michigan families.</p>
+    <p>Join us in the hunt and help feed families in need. Each registration covers one hunter. You may optionally add a meal ticket for a plus one.</p>
   </section>
 
   <!-- Registration Form -->
   <section class="section">
+    <h2>Hunter Registration</h2>
     <form id="registration-form">
       <div class="form-group">
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" required />
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
       </div>
-
+      
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required />
       </div>
-
+      
       <div class="form-group">
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" required />
       </div>
 
-      <div class="form-group">
-        <label for="hunterCount">Number of Hunters ($100 each, max 100)</label>
-        <input type="number" id="hunterCount" name="hunterCount" min="1" max="100" value="1" required />
+      <div class="form-group checkbox">
+        <label>
+          <input type="checkbox" id="mealTicket" name="mealTicket" />
+          Add Meal Ticket for Plus One ($20)
+        </label>
       </div>
 
-      <div class="form-group">
-        <label for="mealTickets">Meal Tickets ($20 each, optional, max 100)</label>
-        <input type="number" id="mealTickets" name="mealTickets" min="0" max="100" value="0" />
-      </div>
+      <!-- Stripe Payment Element -->
+      <div id="payment-element"><!-- Stripe mounts here --></div>
 
-      <div class="form-group total-display">
-        <strong>Total: $<span id="totalAmount">100</span></strong>
-      </div>
-
-      <!-- Stripe Payment Element Placeholder -->
-      <div id="payment-element">
-        <!-- Stripe Payment Element will go here -->
-      </div>
-
-      <button type="submit">Submit & Pay</button>
+      <button type="submit" id="submit">Pay & Register</button>
     </form>
   </section>
 
@@ -76,5 +67,6 @@
     &copy; 2025 Doemageddon. All rights reserved.
   </footer>
 
+  <!-- Stripe Scripts (added later in backend integration) -->
 </body>
 </html>
