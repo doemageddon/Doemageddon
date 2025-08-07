@@ -26,7 +26,8 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 80px; /* Increase this value to make it bigger */
+  width: auto;
 }
 
 .nav-links {
