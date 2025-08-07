@@ -421,3 +421,51 @@ footer {
 .register-button:hover {
   background-color: #e65c00;
 }
+
+
+
+
+
+
+/* Countdown Timer Styling */
+.countdown-timers {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  max-width: 700px;
+}
+
+.countdown-timers h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-timers span {
+  color: #ff6600; /* Hunter orange */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Centered Register Button */
+.register-button-wrapper {
+  margin-top: 2rem;
+}
+
+.register-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #e65c00;
+}
+
