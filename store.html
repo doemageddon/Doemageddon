@@ -182,15 +182,17 @@
   </footer>
 
 
-    <!-- HAMBURGER SCRIPT -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
+  if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
     });
-  </script>
+  }
+</script>
+
 
   
 </body>
