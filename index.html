@@ -8,13 +8,14 @@
 </head>
 <body>
 
+<!-- NAVIGATION WITH HAMBURGER -->
 <nav class="navbar">
   <a href="index.html">
     <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
   </a>
-  
+
   <button class="hamburger" aria-label="Toggle menu">☰</button>
-  
+
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -25,6 +26,7 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+
 
 
   <!-- HERO SECTION -->
@@ -43,15 +45,16 @@
     &copy; 2025 Doemageddon. All rights reserved.
   </footer>
 
-  <!-- HAMBURGER SCRIPT -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 
 </body>
 </html>
