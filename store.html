@@ -6,37 +6,38 @@
   <title>Store - Doemageddon</title>
   <link rel="stylesheet" href="assets/styles/style.css" />
   <style>
-    /* Ensures products are side-by-side and text is white */
-    .product-row {
+    body {
+      background-color: #2a2a2a;
+      color: white;
+    }
+    .product-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
-      margin: 2rem;
+      gap: 40px;
+      padding: 2rem;
     }
-
-    .product-row iframe {
-      max-width: 100%;
+    .product-container {
+      flex: 1 1 calc(50% - 40px);
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 1rem;
     }
-
-    .shopify-buy__product-title,
-    .shopify-buy__product-description,
-    .shopify-buy__product__variant-title,
-    .shopify-buy__product__price,
-    .shopify-buy__cart__subtotal,
-    .shopify-buy__cart__item__title,
-    .shopify-buy__cart__item__variant-title,
-    .shopify-buy__cart__footer__subtotal,
-    .shopify-buy__cart__line-item__price {
-      color: white !important;
+    @media (max-width: 768px) {
+      .product-container {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navbar -->
   <header class="navbar">
-    <img src="assets/images/logo.png" alt="Doemageddon Logo" class="logo" />
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/logo.png" alt="Doemageddon Logo" class="logo">
+    </a>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -49,29 +50,26 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Doemageddon Store</h1>
-    <p>Support our mission by sporting official Doemageddon gear!</p>
-  </section>
-
-  <!-- Products -->
-  <section class="section">
-    <div class="product-row">
-      <div id='product-component-1754568735281'></div>
-      <div id='product-component-1754568824749'></div>
-      <div id='product-component-1754568900258'></div>
-      <div id='product-component-1754412549964'></div>
-      <div id='product-component-1754418509617'></div>
+  <!-- Store Grid -->
+  <section class="product-grid">
+    <div class="product-container">
+      <div id='product-component-1754569927170'></div>
+    </div>
+    <div class="product-container">
+      <div id='product-component-1754569985000'></div>
+    </div>
+    <div class="product-container">
+      <div id='product-component-1754570036118'></div>
+    </div>
+    <div class="product-container">
+      <div id='product-component-1754570058366'></div>
+    </div>
+    <div class="product-container">
+      <div id='product-component-1754570076598'></div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Doemageddon. All rights reserved.
-  </footer>
-
-  <!-- Scripts for All 5 Products -->
+  <!-- Shopify Buy Button Scripts -->
   <script type="text/javascript">
     (function () {
       var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -84,7 +82,6 @@
       } else {
         loadScript();
       }
-
       function loadScript() {
         var script = document.createElement('script');
         script.async = true;
@@ -92,50 +89,51 @@
         (document.head || document.body).appendChild(script);
         script.onload = ShopifyBuyInit;
       }
-
       function ShopifyBuyInit() {
         var client = ShopifyBuy.buildClient({
           domain: '03regv-v4.myshopify.com',
           storefrontAccessToken: '4215a9d91eb97cf87dee01fc98ed8ca3',
         });
-
         ShopifyBuy.UI.onReady(client).then(function (ui) {
-          var productIds = {
-            'product-component-1754568735281': '9758630510839',
-            'product-component-1754568824749': '9758616256759',
-            'product-component-1754568900258': '9757699866871',
-            'product-component-1754412549964': '9757694656759',
-            'product-component-1754418509617': '9757693870327'
-          };
-
-          for (const [id, productId] of Object.entries(productIds)) {
+          const components = [
+            { id: '9758630510839', node: 'product-component-1754569927170' },
+            { id: '9757694656759', node: 'product-component-1754569985000' },
+            { id: '9757699866871', node: 'product-component-1754570036118' },
+            { id: '9757693870327', node: 'product-component-1754570058366' },
+            { id: '9758616256759', node: 'product-component-1754570076598' }
+          ];
+          components.forEach(({ id, node }) => {
             ui.createComponent('product', {
-              id: productId,
-              node: document.getElementById(id),
+              id: id,
+              node: document.getElementById(node),
               moneyFormat: '%24%7B%7Bamount%7D%7D',
               options: {
                 "product": {
+                  "layout": "horizontal",
                   "styles": {
                     "product": {
+                      "text-align": "left",
+                      "color": "#ffffff",
                       "@media (min-width: 601px)": {
-                        "max-width": "calc(25% - 20px)",
-                        "margin-left": "20px",
+                        "max-width": "100%",
+                        "margin-left": "0",
                         "margin-bottom": "50px"
                       }
-                    }
+                    },
+                    "title": { "font-size": "24px", "color": "#ffffff" },
+                    "price": { "font-size": "18px", "color": "#ffffff" },
+                    "compareAt": { "font-size": "15px", "color": "#ffffff" },
+                    "unitPrice": { "font-size": "15px", "color": "#ffffff" }
+                  },
+                  "contents": {
+                    "img": false,
+                    "imgWithCarousel": true,
+                    "description": true
                   },
                   "text": {
                     "button": "Add to cart"
-                  }
-                },
-                "productSet": {
-                  "styles": {
-                    "products": {
-                      "@media (min-width: 601px)": {
-                        "margin-left": "-20px"
-                      }
-                    }
-                  }
+                  },
+                  "width": "100%"
                 },
                 "modalProduct": {
                   "contents": {
@@ -157,22 +155,26 @@
                     "button": "Add to cart"
                   }
                 },
-                "option": {},
                 "cart": {
                   "text": {
                     "total": "Subtotal",
                     "button": "Checkout"
-                  }
+                  },
+                  "popup": false
                 },
                 "toggle": {}
               }
             });
-          }
+          });
         });
       }
     })();
   </script>
 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Doemageddon. All rights reserved.
+  </footer>
 </body>
 </html>
 
