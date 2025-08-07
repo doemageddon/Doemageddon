@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Doemageddon</title>
+  <link rel="stylesheet" href="assets/styles/style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+  <img src="assets/images/logo.png" alt="Doemageddon Logo" class="logo" />
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Contact Form Section -->
+<main class="section">
+  <h1>Contact Us</h1>
+  <p>If you have any questions or would like to reach out, use the form below and we’ll get back to you as soon as possible.</p>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="_replyto" required />
+
+    <label for="message">Message*</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Doemageddon. All rights reserved.
+</footer>
+
+</body>
+</html>
