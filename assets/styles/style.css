@@ -23,10 +23,11 @@ body {
   align-items: center;
   background-color: #7A3E1D;
   padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .logo {
-  height: 100px; /* Increase this value to make it bigger */
+  height: 100px;
   width: auto;
 }
 
@@ -34,6 +35,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -83,18 +85,7 @@ footer {
   border-radius: 8px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-
+/* SPONSORS */
 .sponsor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -109,20 +100,20 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px; /* Set a consistent card height */
+  height: 120px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   padding: 10px;
 }
 
 .sponsor-card img {
-  max-height: 100px;  /* Uniform logo height */
+  max-height: 100px;
   max-width: 100%;
   object-fit: contain;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 }
 
-
+/* PRODUCT GRID */
 .product-flex {
   display: flex;
   flex-wrap: wrap;
@@ -134,7 +125,7 @@ footer {
   flex: 0 1 300px;
 }
 
-/* Contact Form Styles */
+/* CONTACT FORM */
 .contact-form {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 2rem;
@@ -165,13 +156,13 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 2px solid #ff6600; /* hunter orange */
+  outline: 2px solid #ff6600;
 }
 
 .contact-form button {
   margin-top: 2rem;
   padding: 1rem;
-  background-color: #ff6600; /* hunter orange */
+  background-color: #ff6600;
   border: none;
   border-radius: 5px;
   color: white;
@@ -184,6 +175,7 @@ footer {
   background-color: #e65c00;
 }
 
+/* LOGO SECTION */
 .logo-section {
   display: flex;
   justify-content: center;
@@ -195,9 +187,11 @@ footer {
   max-width: 600px;
   width: 90%;
   height: auto;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
-
+/* FADE-IN ANIMATION */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -209,10 +203,49 @@ footer {
   }
 }
 
-.center-logo {
-  max-width: 600px;
-  width: 90%;
-  height: auto;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards;
+/* -------------------- */
+/* RESPONSIVE MOBILE */
+/* -------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .product-flex > div {
+    flex: 1 1 100%;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .center-logo {
+    max-width: 90%;
+  }
+
+  .logo {
+    height: 80px;
+  }
 }
+
