@@ -35,6 +35,20 @@
     <p>Hunt with Purpose. Feed with Heart.</p>
   </section>
 
+
+  <!-- Countdown Timer -->
+  <section class="countdown-timers">
+  <div class="timer-box">
+    <h2>Event Countdown</h2>
+    <p id="eventCountdown">Loading...</p>
+  </div>
+  <div class="timer-box">
+    <h2>Registration Ends In</h2>
+    <p id="registrationCountdown">Loading...</p>
+  </div>
+</section>
+
+
   <!-- CENTERED LOGO -->
   <section class="logo-section">
     <img src="assets/images/logo-2.png" alt="Doemageddon Center Logo" class="center-logo" />
@@ -53,6 +67,40 @@
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
   });
+</script>
+
+
+  <script>
+  // Set your event and registration end dates here
+  const eventDate = new Date("2025-12-6T07:00:00"); // Example: Nov 15, 2025 at 8:00 AM
+  const registrationDeadline = new Date("2025-11-23T23:59:59");
+
+  function updateCountdown(id, targetDate) {
+    const now = new Date();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      document.getElementById(id).innerText = "Time's up!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById(id).innerText =
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  function startCountdowns() {
+    setInterval(() => {
+      updateCountdown("eventCountdown", eventDate);
+      updateCountdown("registrationCountdown", registrationDeadline);
+    }, 1000);
+  }
+
+  startCountdowns();
 </script>
 
 
