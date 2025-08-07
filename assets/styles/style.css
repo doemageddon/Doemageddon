@@ -334,3 +334,22 @@ footer {
   position: relative;
 }
 
+
+/* Ensure navbar sits above everything */
+.navbar {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Make nav dropdown appear on top */
+.nav-links {
+  z-index: 1001;
+}
+
+/* Ensure the center logo stays underneath */
+.center-logo {
+  position: relative;
+  z-index: 1;
+}
+
+
