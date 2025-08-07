@@ -382,3 +382,36 @@ footer {
 }
 
 
+
+
+.countdown-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+.countdown-text {
+  font-size: 2rem;
+  color: #ff6600; /* Hunter Orange */
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.register-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #ff6600; /* Hunter Orange */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #e65c00;
+}
