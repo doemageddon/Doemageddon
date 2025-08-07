@@ -8,27 +8,25 @@
 </head>
 <body>
 
-  <!-- NAVIGATION WITH HAMBURGER -->
-  <nav class="navbar">
-    <a href="index.html">
-  <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
-</a>
+<!-- NAVIGATION WITH HAMBURGER -->
+<nav class="navbar">
+  <a href="index.html">
+    <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
+  </a>
 
+  <button class="hamburger" aria-label="Toggle menu">☰</button>
 
-   <button class="hamburger" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rules.html">Rules</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="store.html">Store</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  </header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -80,15 +78,16 @@
   </footer>
 
 
-    <!-- HAMBURGER SCRIPT -->
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 
 </body>
 </html>
