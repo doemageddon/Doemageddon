@@ -352,4 +352,21 @@ footer {
   z-index: 1;
 }
 
+.countdown-timers {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+}
+
+.timer-box {
+  text-align: center;
+  font-size: 1.2rem;
+}
 
