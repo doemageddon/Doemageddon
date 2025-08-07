@@ -5,12 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Store - Doemageddon</title>
   <link rel="stylesheet" href="assets/styles/style.css" />
+  <style>
+    /* Ensures products are side-by-side and text is white */
+    .product-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem;
+    }
+
+    .product-row iframe {
+      max-width: 100%;
+    }
+
+    .shopify-buy__product-title,
+    .shopify-buy__product-description,
+    .shopify-buy__product__variant-title,
+    .shopify-buy__product__price,
+    .shopify-buy__cart__subtotal,
+    .shopify-buy__cart__item__title,
+    .shopify-buy__cart__item__variant-title,
+    .shopify-buy__cart__footer__subtotal,
+    .shopify-buy__cart__line-item__price {
+      color: white !important;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <header class="navbar">
-    <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
+    <img src="assets/images/logo.png" alt="Doemageddon Logo" class="logo" />
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -25,25 +51,27 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Official Doemageddon Store</h1>
-    <p>Support the cause and show your pride with official merchandise.</p>
+    <h1>Doemageddon Store</h1>
+    <p>Support our mission by sporting official Doemageddon gear!</p>
   </section>
 
-<!-- Product Section -->
-<section class="section">
-  <div class="product-flex">
-    <div id="product-component-1"></div>
-    <div id="product-component-2"></div>
-  </div>
-</section>
-
+  <!-- Products -->
+  <section class="section">
+    <div class="product-row">
+      <div id='product-component-1754568735281'></div>
+      <div id='product-component-1754568824749'></div>
+      <div id='product-component-1754568900258'></div>
+      <div id='product-component-1754412549964'></div>
+      <div id='product-component-1754418509617'></div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Doemageddon. All rights reserved.
   </footer>
 
-  <!-- Shopify Buy Button Scripts -->
+  <!-- Scripts for All 5 Products -->
   <script type="text/javascript">
     (function () {
       var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -61,7 +89,7 @@
         var script = document.createElement('script');
         script.async = true;
         script.src = scriptURL;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        (document.head || document.body).appendChild(script);
         script.onload = ShopifyBuyInit;
       }
 
@@ -72,93 +100,74 @@
         });
 
         ShopifyBuy.UI.onReady(client).then(function (ui) {
-          ui.createComponent('product', {
-            id: '9757694656759',
-            node: document.getElementById('product-component-1'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: {
-              product: {
-                styles: {
-                  product: {
-                    '@media (min-width: 601px)': {
-                      'max-width': '300px',
-                      'margin': 'auto'
-                    },
-                    'color': '#ffffff'
-                  },
-                  title: {
-                    color: '#ffffff'
-                  },
-                  description: {
-                    color: '#ffffff'
-                  },
-                  price: {
-                    color: '#ffffff'
-                  },
-                  compareAt: {
-                    color: '#dddddd'
-                  },
-                  button: {
-                    'background-color': '#7A3E1D',
-                    'color': '#ffffff'
-                  }
-                },
-                text: {
-                  button: 'Add to cart'
-                }
-              },
-              cart: {
-                text: {
-                  total: 'Subtotal',
-                  button: 'Checkout'
-                }
-              }
-            }
-          });
+          var productIds = {
+            'product-component-1754568735281': '9758630510839',
+            'product-component-1754568824749': '9758616256759',
+            'product-component-1754568900258': '9757699866871',
+            'product-component-1754412549964': '9757694656759',
+            'product-component-1754418509617': '9757693870327'
+          };
 
-          ui.createComponent('product', {
-            id: '9757693870327',
-            node: document.getElementById('product-component-2'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: {
-              product: {
-                styles: {
-                  product: {
-                    '@media (min-width: 601px)': {
-                      'max-width': '300px',
-                      'margin': 'auto'
-                    },
-                    'color': '#ffffff'
+          for (const [id, productId] of Object.entries(productIds)) {
+            ui.createComponent('product', {
+              id: productId,
+              node: document.getElementById(id),
+              moneyFormat: '%24%7B%7Bamount%7D%7D',
+              options: {
+                "product": {
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "calc(25% - 20px)",
+                        "margin-left": "20px",
+                        "margin-bottom": "50px"
+                      }
+                    }
                   },
-                  title: {
-                    color: '#ffffff'
-                  },
-                  description: {
-                    color: '#ffffff'
-                  },
-                  price: {
-                    color: '#ffffff'
-                  },
-                  compareAt: {
-                    color: '#dddddd'
-                  },
-                  button: {
-                    'background-color': '#7A3E1D',
-                    'color': '#ffffff'
+                  "text": {
+                    "button": "Add to cart"
                   }
                 },
-                text: {
-                  button: 'Add to cart'
-                }
-              },
-              cart: {
-                text: {
-                  total: 'Subtotal',
-                  button: 'Checkout'
-                }
+                "productSet": {
+                  "styles": {
+                    "products": {
+                      "@media (min-width: 601px)": {
+                        "margin-left": "-20px"
+                      }
+                    }
+                  }
+                },
+                "modalProduct": {
+                  "contents": {
+                    "img": false,
+                    "imgWithCarousel": true,
+                    "button": false,
+                    "buttonWithQuantity": true
+                  },
+                  "styles": {
+                    "product": {
+                      "@media (min-width: 601px)": {
+                        "max-width": "100%",
+                        "margin-left": "0px",
+                        "margin-bottom": "0px"
+                      }
+                    }
+                  },
+                  "text": {
+                    "button": "Add to cart"
+                  }
+                },
+                "option": {},
+                "cart": {
+                  "text": {
+                    "total": "Subtotal",
+                    "button": "Checkout"
+                  }
+                },
+                "toggle": {}
               }
-            }
-          });
+            });
+          }
         });
       }
     })();
