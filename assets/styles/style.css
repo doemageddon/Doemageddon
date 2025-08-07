@@ -402,6 +402,7 @@ footer {
 
 .register-button {
   display: inline-block;
+  margin: 0 auto;
   padding: 1rem 2rem;
   background-color: #ff6600; /* Hunter Orange */
   color: white;
@@ -411,6 +412,11 @@ footer {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
+.register-button:hover {
+  background-color: #e65c00;
+}
+
 
 .register-button:hover {
   background-color: #e65c00;
