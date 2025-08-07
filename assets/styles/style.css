@@ -182,3 +182,17 @@ footer {
 .contact-form button:hover {
   background-color: #e65c00;
 }
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.center-logo {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+}
+
