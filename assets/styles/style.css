@@ -273,7 +273,7 @@ footer {
     transition: max-height 0.3s ease;
   }
 
-  .nav-links.open {
+  .nav-links.show {
     max-height: 500px;
   }
 
