@@ -469,3 +469,15 @@ footer {
   background-color: #e65c00;
 }
 
+
+.event-flyer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.flyer-img {
+  max-width: 90%;
+  height: auto;
+  border: 3px solid #ff6600; /* hunter's orange border */
+  border-radius: 8px;
+}
