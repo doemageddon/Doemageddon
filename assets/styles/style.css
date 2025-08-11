@@ -484,3 +484,11 @@ footer {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
 }
 
+
+/* Store section wrapper if you want extra spacing */
+.store-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+}
+
