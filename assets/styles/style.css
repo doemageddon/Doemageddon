@@ -470,14 +470,17 @@ footer {
 }
 
 
-.event-flyer {
-  text-align: center;
-  margin: 2rem 0;
-}
-
 .flyer-img {
   max-width: 90%;
   height: auto;
-  border: 3px solid #ff6600; /* hunter's orange border */
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  border: 3px solid #ff6600; /* Hunter orange border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.flyer-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
+}
+
