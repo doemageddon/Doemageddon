@@ -75,8 +75,8 @@
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
           product: {
-            buttonDestination: 'modal',
-            isButton: true,
+            buttonDestination: 'modal',    /* open modal on click */
+            isButton: true,                /* makes whole card clickable with cursor */
             contents: {
               img: true,
               title: true,
@@ -85,7 +85,7 @@
             },
             styles: {
               product: {
-                cursor: 'pointer', /* makes entire product clickable */
+                cursor: 'pointer',
                 'background-color': 'rgba(255,255,255,0.05)',
                 'border-radius': '10px',
                 'padding': '14px',
@@ -112,7 +112,7 @@
           modalProduct: {
             contents: {
               img: true,
-              imgWithCarousel: true,
+              imgWithCarousel: true,       /* ✅ multiple images show as a carousel */
               button: false,
               buttonWithQuantity: true
             },
@@ -142,4 +142,5 @@
 
 </body>
 </html>
+
 
