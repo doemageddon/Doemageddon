@@ -1,4 +1,3 @@
-<!-- store.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,6 @@
       <img src="assets/images/doemageddon-logo.jpg" alt="Doemageddon Logo" class="logo" />
     </a>
 
-    <!-- Hamburger -->
     <button class="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -37,7 +35,7 @@
     <p>New items appear here automatically when added in Shopify.</p>
   </section>
 
-  <!-- COLLECTION EMBED -->
+  <!-- COLLECTION (auto-updates) -->
   <section class="section store-section">
     <div id="collection-component-1754935260145"></div>
   </section>
@@ -54,7 +52,7 @@
     });
   </script>
 
-  <!-- SHOPIFY BUY BUTTON: COLLECTION -->
+  <!-- SHOPIFY BUY BUTTON: COLLECTION WITH MODAL/CAROUSEL -->
   <script type="text/javascript">
   (function () {
     var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -105,18 +103,15 @@
                 },
                 buttonHover: { 'background-color': '#e65c00' }
               },
-              contents: {
-                img: true,
-                options: true,
-                description: false
-              },
+              // Show image + options; clicking the product opens the Shopify modal with carousel
+              contents: { img: true, options: true, description: false },
               text: { button: 'Add to cart' }
             },
             productSet: { styles: { products: { 'align-items': 'stretch' } } },
             modalProduct: {
               contents: {
                 img: true,
-                imgWithCarousel: true,
+                imgWithCarousel: true,  // enables multiple images in a large modal
                 button: false,
                 buttonWithQuantity: true
               },
@@ -145,35 +140,6 @@
     }
   })();
   </script>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" style="display:none;">
-  <span id="lightbox-close">&times;</span>
-  <img id="lightbox-img" src="" alt="Product Image">
-</div>
-
-<script>
-document.addEventListener('click', function(e) {
-  if (e.target.tagName === 'IMG' && e.target.closest('.shopify-buy__product-img-wrapper')) {
-    document.getElementById('lightbox-img').src = e.target.src;
-    document.getElementById('lightbox').style.display = 'flex';
-  }
-});
-
-document.getElementById('lightbox-close').addEventListener('click', function() {
-  document.getElementById('lightbox').style.display = 'none';
-});
-
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) {
-    this.style.display = 'none';
-  }
-});
-</script>
-
-
 </body>
 </html>
-
-
 
