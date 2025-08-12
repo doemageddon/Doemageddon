@@ -145,6 +145,33 @@
     }
   })();
   </script>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" style="display:none;">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Product Image">
+</div>
+
+<script>
+document.addEventListener('click', function(e) {
+  if (e.target.tagName === 'IMG' && e.target.closest('.shopify-buy__product-img-wrapper')) {
+    document.getElementById('lightbox-img').src = e.target.src;
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+});
+
+document.getElementById('lightbox-close').addEventListener('click', function() {
+  document.getElementById('lightbox').style.display = 'none';
+});
+
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+  }
+});
+</script>
+
+
 </body>
 </html>
 
