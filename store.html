@@ -32,7 +32,7 @@
 </section>
 
 <!-- Store Collection -->
-<div id="collection-component-1754935260145"></div>
+<div id="collection-component"></div>
 
 <!-- FOOTER -->
 <footer>
@@ -47,41 +47,39 @@
 </script>
 
 <!-- SHOPIFY BUY BUTTON SCRIPT -->
-<script type="text/javascript">
+<script>
 (function () {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) { ShopifyBuyInit(); } else { loadScript(); }
-  } else { loadScript(); }
+  var SDK = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) { window.ShopifyBuy.UI ? init() : load(); } else { load(); }
 
-  function loadScript() {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = scriptURL;
-    (document.head || document.body).appendChild(script);
-    script.onload = ShopifyBuyInit;
+  function load() {
+    var s = document.createElement('script');
+    s.async = true; s.src = SDK;
+    (document.head || document.body).appendChild(s);
+    s.onload = init;
   }
 
-  function ShopifyBuyInit() {
+  function init() {
     var client = ShopifyBuy.buildClient({
       domain: '03regv-v4.myshopify.com',
-      storefrontAccessToken: '4215a9d91eb97cf87dee01fc98ed8ca3',
+      storefrontAccessToken: '4215a9d91eb97cf87dee01fc98ed8ca3'
     });
 
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: '488916058359', // your collection ID
-        node: document.getElementById('collection-component-1754935260145'),
+        node: document.getElementById('collection-component'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
           product: {
-            buttonDestination: 'modal',    /* open modal on click */
-            isButton: true,                /* makes whole card clickable with cursor */
+            // 🔑 make entire card open the big modal
+            isButton: true,
+            buttonDestination: 'modal',
             contents: {
               img: true,
               title: true,
               price: true,
-              button: true
+              button: false   // hide inline add-to-cart to avoid confusion
             },
             styles: {
               product: {
@@ -97,22 +95,15 @@
               title: { 'color': '#ffffff' },
               price: { 'color': '#ffffff' },
               compareAt: { 'color': '#dddddd' },
-              unitPrice: { 'color': '#dddddd' },
-              button: {
-                'background-color': '#ff6600',
-                'border-radius': '8px',
-                'padding': '12px 14px',
-                'font-weight': 'bold'
-              },
-              buttonHover: { 'background-color': '#e65c00' }
-            },
-            text: { button: 'Add to cart' }
+              unitPrice: { 'color': '#dddddd' }
+            }
           },
-          productSet: { styles: { products: { 'align-items': 'stretch' } } },
+
+          // Big modal with carousel
           modalProduct: {
             contents: {
               img: true,
-              imgWithCarousel: true,       /* ✅ multiple images show as a carousel */
+              imgWithCarousel: true,  // shows multiple images as slides (if product has >1)
               button: false,
               buttonWithQuantity: true
             },
@@ -123,7 +114,7 @@
             },
             text: { button: 'Add to cart' }
           },
-          option: {},
+
           cart: {
             styles: {
               button: { 'background-color': '#ff6600' },
@@ -131,8 +122,7 @@
             },
             text: { total: 'Subtotal', button: 'Checkout' },
             popup: false
-          },
-          toggle: {}
+          }
         }
       });
     });
