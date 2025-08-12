@@ -75,10 +75,17 @@
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
           product: {
-            buttonDestination: 'modal', /* opens large modal on click */
-            contents: { img: true, options: true, description: false },
+            buttonDestination: 'modal',
+            isButton: true,
+            contents: {
+              img: true,
+              title: true,
+              price: true,
+              button: true
+            },
             styles: {
               product: {
+                cursor: 'pointer', /* makes entire product clickable */
                 'background-color': 'rgba(255,255,255,0.05)',
                 'border-radius': '10px',
                 'padding': '14px',
