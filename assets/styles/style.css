@@ -524,23 +524,19 @@ footer {
 }
 
 
-/* Lightbox Styling */
+/* Lightbox overlay (HIDDEN by default) */
 .lightbox {
-  display: none; 
+  display: none;                 /* <- this is the critical piece */
   position: fixed;
+  inset: 0;                      /* top/right/bottom/left: 0 */
   z-index: 9999;
+  background: rgba(0,0,0,0.9);
   padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .lightbox-content {
-  margin: auto;
   display: block;
+  margin: auto;
   max-width: 90%;
   max-height: 80vh;
 }
@@ -549,22 +545,28 @@ footer {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: white;
+  color: #fff;
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
 
+/* Make sponsor logos clickable & tidy */
 .sponsor-logo {
-  max-width: 150px;
-  margin: 10px;
+  max-height: 100px;
+  max-width: 100%;
+  object-fit: contain;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform .2s ease;
 }
 
 .sponsor-logo:hover {
   transform: scale(1.05);
 }
+
+/* Keep grid below lightbox if anything else has z-index */
+.sponsor-grid { position: relative; z-index: 1; }
+
 
 
 
