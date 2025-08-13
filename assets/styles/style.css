@@ -576,6 +576,27 @@ footer {
 body.modal-open { overflow: hidden; }
 
 
+/* Big Orange Register Button */
+.register-now-wrapper {
+  margin-top: 1.5rem;
+}
+
+.register-now-btn {
+  display: inline-block;
+  background-color: #ff6600; /* Hunter’s Orange */
+  color: white;
+  padding: 18px 32px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-now-btn:hover {
+  background-color: #e65c00; /* Darker orange on hover */
+  transform: scale(1.05);
+}
 
 
 
