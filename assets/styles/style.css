@@ -94,7 +94,7 @@ footer {
 }
 
 .sponsor-card img {
-  max-width: 100%;
+  max-width: 250px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.2s ease;
