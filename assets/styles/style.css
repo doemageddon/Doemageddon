@@ -88,20 +88,34 @@ footer {
 /* SPONSORS */
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* space between logos */
-  justify-items: center; /* center logos in each cell */
+  grid-template-columns: repeat(3, 1fr); /* desktop: 3 across */
+  gap: 30px;
+  justify-items: center;
 }
 
 .sponsor-card img {
-  max-width: 500px;
+  max-width: 250px; /* larger logos */
   height: auto;
   border-radius: 8px;
   transition: transform 0.2s ease;
 }
 
 .sponsor-card img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+/* Tablet: 2 across */
+@media (max-width: 900px) {
+  .sponsor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 across */
+@media (max-width: 600px) {
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
