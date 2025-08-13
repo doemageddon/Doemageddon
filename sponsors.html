@@ -17,6 +17,31 @@
   gtag('config', 'G-BQP5NBEPJF');
 </script>
 
+<script>
+  const logos = document.querySelectorAll('.sponsor-logo');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  logos.forEach(logo => {
+    logo.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = logo.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+
   
 <body>
 
@@ -60,6 +85,12 @@
 </div>
    <div class="sponsor-card">
   <img src="assets/images/Mossy-Oak-Properties.jpg" alt="Sponsor 4" />
+</div>
+
+      <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
 </div>
       
       <!-- Add more sponsor cards -->
