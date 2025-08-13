@@ -7,42 +7,15 @@
   <link rel="stylesheet" href="assets/styles/style.css" />
 </head>
 
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQP5NBEPJF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-BQP5NBEPJF');
 </script>
 
-<script>
-  const logos = document.querySelectorAll('.sponsor-logo');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeBtn = document.querySelector('.lightbox .close');
-
-  logos.forEach(logo => {
-    logo.addEventListener('click', () => {
-      lightbox.style.display = 'block';
-      lightboxImg.src = logo.src;
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = 'none';
-    }
-  });
-</script>
-
-
-  
 <body>
 
 <!-- NAVIGATION WITH HAMBURGER -->
@@ -64,78 +37,108 @@
   </ul>
 </nav>
 
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Our Sponsors</h1>
+  <p>Doemageddon wouldn't be possible without the support of our generous sponsors. Thank you for helping us make a difference.</p>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Our Sponsors</h1>
-    <p>Doemageddon wouldn't be possible without the support of our generous sponsors. Thank you for helping us make a difference.</p>
-  </section>
-
-  <!-- Sponsor Logos -->
-  <section class="section">
-    <div class="sponsor-grid">
-      <div class="sponsor-card">
-        <img src="assets/images/Apex-Custom-Butchering.jpg" alt="Sponsor 1" />
-      </div>
-      <div class="sponsor-card">
-        <img src="assets/images/total-firearms.jpg" alt="Sponsor 2" />
-      </div>
-   <div class="sponsor-card">
-  <img src="assets/images/fthb.jpg" alt="Sponsor 3" />
-</div>
-   <div class="sponsor-card">
-  <img src="assets/images/Mossy-Oak-Properties.jpg" alt="Sponsor 4" />
-</div>
-
-      <!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
-      
-      <!-- Add more sponsor cards -->
+<!-- Sponsor Logos -->
+<section class="section">
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <img src="assets/images/Apex-Custom-Butchering.jpg" alt="Apex Custom Butchering" class="sponsor-logo" />
     </div>
-  </section>
+    <div class="sponsor-card">
+      <img src="assets/images/total-firearms.jpg" alt="Total Firearms" class="sponsor-logo" />
+    </div>
+    <div class="sponsor-card">
+      <img src="assets/images/fthb.jpg" alt="FTHB" class="sponsor-logo" />
+    </div>
+    <div class="sponsor-card">
+      <img src="assets/images/Mossy-Oak-Properties.jpg" alt="Mossy Oak Properties" class="sponsor-logo" />
+    </div>
+    <!-- Add more sponsor cards as needed -->
+  </div>
+</section>
 
-  <!-- Become a Sponsor Form -->
-  <section class="section">
-    <h2 style="text-align: center;">Become a Sponsor</h2>
-    <p style="text-align: center;">Interested in supporting Doemageddon? Fill out the form below and we’ll get in touch!</p>
-    
-    <form action="https://formspree.io/f/xwpqrdyk" method="POST" style="max-width: 600px; margin: 2rem auto;">
-      <div class="form-group">
-        <label for="name">Your Name:</label>
-        <input type="text" name="name" id="name" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Your Email:</label>
-        <input type="email" name="email" id="email" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Tell us about your sponsorship interest:</label>
-        <textarea name="message" id="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="buy-btn">Submit Inquiry</button>
-    </form>
-  </section>
+<!-- Become a Sponsor Form -->
+<section class="section">
+  <h2 style="text-align: center;">Become a Sponsor</h2>
+  <p style="text-align: center;">Interested in supporting Doemageddon? Fill out the form below and we’ll get in touch!</p>
+  
+  <form action="https://formspree.io/f/xwpqrdyk" method="POST" style="max-width: 600px; margin: 2rem auto;">
+    <div class="form-group">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" id="name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" required />
+    </div>
+    <div class="form-group">
+      <label for="message">Tell us about your sponsorship interest:</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="buy-btn">Submit Inquiry</button>
+  </form>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Doemageddon. All rights reserved.
-  </footer>
+<!-- Footer -->
+<footer>
+  &copy; 2025 Doemageddon. All rights reserved.
+</footer>
 
+<!-- Lightbox Modal (keep outside the grid) -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <span class="close" aria-label="Close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Sponsor logo enlarged">
+</div>
 
 <!-- HAMBURGER SCRIPT -->
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('show');
   });
 </script>
 
+<!-- LIGHTBOX SCRIPT: runs after DOM is ready -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const logos = document.querySelectorAll('.sponsor-logo');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    logos.forEach(logo => {
+      logo.addEventListener('click', () => {
+        lightboxImg.src = logo.src;
+        lightbox.style.display = 'block';
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Escape key closes the lightbox
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'block') {
+        closeLightbox();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
+
 
