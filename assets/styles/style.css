@@ -524,34 +524,42 @@ footer {
 }
 
 
-/* Lightbox overlay (HIDDEN by default) */
-.lightbox {
-  display: none;                 /* <- this is the critical piece */
+/* --- Lightbox (force hidden by default) --- */
+.lightbox { 
+  display: none !important;
   position: fixed;
-  inset: 0;                      /* top/right/bottom/left: 0 */
+  inset: 0;
   z-index: 9999;
   background: rgba(0,0,0,0.9);
-  padding-top: 60px;
+  padding: 60px 16px 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Only show when explicitly opened */
+.lightbox[aria-hidden="false"] {
+  display: flex !important;
 }
 
 .lightbox-content {
-  display: block;
-  margin: auto;
   max-width: 90%;
   max-height: 80vh;
+  width: auto;
+  height: auto;
+  display: block;
 }
 
 .lightbox .close {
   position: absolute;
   top: 20px;
-  right: 35px;
+  right: 24px;
   color: #fff;
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* Make sponsor logos clickable & tidy */
+/* Logos clickable */
 .sponsor-logo {
   max-height: 100px;
   max-width: 100%;
@@ -559,13 +567,14 @@ footer {
   cursor: pointer;
   transition: transform .2s ease;
 }
+.sponsor-logo:hover { transform: scale(1.05); }
 
-.sponsor-logo:hover {
-  transform: scale(1.05);
-}
-
-/* Keep grid below lightbox if anything else has z-index */
+/* Keep grid below overlay if any stacking context exists */
 .sponsor-grid { position: relative; z-index: 1; }
+
+/* Prevent background scroll when modal open */
+body.modal-open { overflow: hidden; }
+
 
 
 
