@@ -579,6 +579,8 @@ body.modal-open { overflow: hidden; }
 /* Big Orange Register Button */
 .register-now-wrapper {
   margin-top: 1.5rem;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
 }
 
 .register-now-btn {
@@ -597,6 +599,7 @@ body.modal-open { overflow: hidden; }
   background-color: #e65c00; /* Darker orange on hover */
   transform: scale(1.05);
 }
+
 
 
 
