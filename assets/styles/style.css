@@ -575,16 +575,6 @@ footer {
 /* Prevent background scroll when modal open */
 body.modal-open { overflow: hidden; }
 
-/* Hunter Orange store link */
-.nav-links a[href="store.html"] {
-  color: #ff6600 !important; /* Hunter’s orange */
-  font-weight: bold;
-}
-
-/* Optional: hover effect */
-.nav-links a[href="store.html"]:hover {
-  color: #e65c00 !important; /* Slightly darker orange on hover */
-}
 
 
 
