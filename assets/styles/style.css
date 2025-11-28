@@ -628,7 +628,7 @@ body.modal-open { overflow: hidden; }
 }
 
 .closed-overlay img {
-    width: 350px;   /* Adjust size as needed */
+    width: 600px;   /* Adjust size as needed */
     opacity: 1;
 }
 
