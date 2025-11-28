@@ -608,6 +608,32 @@ body.modal-open { overflow: hidden; }
 
 
 
+.registration-wrapper {
+    position: relative;
+}
+
+.registration-forms {
+    opacity: 0.25;         /* Dim the forms behind */
+    pointer-events: none;  /* Disable clicking / submitting */
+    filter: blur(2px);     /* Optional: adds slight blur */
+}
+
+.closed-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.closed-overlay img {
+    width: 350px;   /* Adjust size as needed */
+    opacity: 1;
+}
+
+
+
 
 
 
