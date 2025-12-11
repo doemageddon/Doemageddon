@@ -718,6 +718,11 @@ body.modal-open { overflow: hidden; }
 }
 
 
+.doe-results {
+  text-align: center; /* Centers all text inside */
+  max-width: 400px;   /* Optional: limits width for better look */
+  margin: 0 auto 2rem; /* Center block and add bottom spacing */
+}
 
 
 
