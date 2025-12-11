@@ -61,13 +61,19 @@
   <h2>📸 Event Photo Gallery</h2>
   <p>Here are some highlights from Doemageddon 2025.</p>
 
-  <!-- PHOTO GRID (4 PHOTOS) -->
-  <div class="photo-grid">
-    <img src="assets/images/doemageddon winnerss.png" alt="Event Photo 1">
-    <img src="assets/images/prize winners.png" alt="Event Photo 2">
-    <img src="assets/images/event-photo-3.jpg" alt="Event Photo 3">
-    <img src="assets/images/event-photo-4.jpg" alt="Event Photo 4">
-  </div>
+<!-- PHOTO GRID (4 PHOTOS) -->
+<div class="photo-grid">
+  <img src="assets/images/doemageddon winnerss.png" alt="Event Photo 1" onclick="openModal(this.src)">
+  <img src="assets/images/prize winners.png" alt="Event Photo 2" onclick="openModal(this.src)">
+  <img src="assets/images/event-photo-3.jpg" alt="Event Photo 3" onclick="openModal(this.src)">
+  <img src="assets/images/event-photo-4.jpg" alt="Event Photo 4" onclick="openModal(this.src)">
+</div>
+
+<!-- MODAL FOR FULL-SIZE IMAGES -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <img id="modalImage" class="modal-content">
+</div>
+
 
   <!-- VIDEO SECTION (2 VIDEOS) -->
   <h2 style="margin-top: 3rem;">🎥 Event Videos</h2>
@@ -169,6 +175,17 @@
   }
 
   startCountdowns();
+</script>
+
+  <script>
+function openModal(src) {
+  document.getElementById("modalImage").src = src;
+  document.getElementById("imageModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
 </script>
 
 
