@@ -740,6 +740,17 @@ body.modal-open { overflow: hidden; }
   margin-bottom: 1rem;
 }
 
+.results-photo {
+  text-align: center;      /* center the image */
+  margin-top: 2rem;        /* spacing from results section */
+}
+
+.results-photo img {
+  max-width: 90%;          /* scales with screen size */
+  height: auto;
+  border-radius: 10px;     /* optional rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional subtle shadow */
+}
 
 
 
