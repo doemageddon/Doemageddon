@@ -724,6 +724,21 @@ body.modal-open { overflow: hidden; }
   margin: 0 auto 2rem; /* Center block and add bottom spacing */
 }
 
+.results-box {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center; /* keeps the text centered */
+  margin-top: 1rem;
+  line-height: 1.6;
+
+  font-size: 1.2rem;  /* Make all text bigger */
+}
+
+.results-box h3 {
+  font-size: 1.5rem; /* Make headings even bigger */
+  margin-bottom: 1rem;
+}
 
 
 
