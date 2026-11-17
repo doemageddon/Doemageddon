@@ -789,3 +789,37 @@ body.modal-open { overflow: hidden; }
 }
 
 
+/* LARGE REGISTER BUTTON UNDER FLYER */
+.flyer-register {
+  text-align: center;
+  margin: 25px auto 45px;
+  padding: 0 15px;
+}
+
+.big-register-button {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 20px 65px;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+}
+
+.big-register-button:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .big-register-button {
+    width: 90%;
+    font-size: 1.5rem;
+    padding: 18px 20px;
+  }
+}
+
