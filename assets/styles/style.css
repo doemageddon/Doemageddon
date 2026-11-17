@@ -758,3 +758,34 @@ body.modal-open { overflow: hidden; }
 .shopify-buy__collection{ position: relative; z-index: 1; }
 
 
+/* EVENT FLYER */
+.event-flyer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.event-flyer img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 768px) {
+  .event-flyer {
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+
+  .event-flyer img {
+    border-radius: 5px;
+  }
+}
+
+
